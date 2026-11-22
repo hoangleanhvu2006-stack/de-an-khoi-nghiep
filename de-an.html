@@ -171,6 +171,7 @@ figure.hinh .cot b{font-size:18px}
           <g font-size="12" font-weight="700" fill="#10203A" text-anchor="middle"><text x="42" y="66">lỗ 874</text><text x="115" y="66">lỗ 61</text><text x="188" y="18">lãi 2.092</text></g>
           <g font-size="11.5" fill="#56677F" text-anchor="middle"><text x="42" y="113">2027</text><text x="115" y="113">2028</text><text x="188" y="113">2029</text></g>
         </svg>
+        <p>Lãi, lỗ trước thuế. Đơn vị: triệu đồng.</p>
       </div>
     </div>
     <div class="dieu-khien"><h2>Toàn văn</h2><button type="button" id="mo-het" aria-pressed="false">Mở tất cả các phần</button></div>
@@ -598,6 +599,7 @@ ml.addEventListener("click", function(e){
   try { history.replaceState(null, "", "#" + id); } catch (err) {}
 });
 if (location.hash.length > 1) toi(location.hash.slice(1), true);
+window.addEventListener("hashchange", function(){ if (location.hash.length > 1) toi(location.hash.slice(1), true); });
 window.addEventListener("beforeprint", function(){ moHet(true); });
 var link = {}; [].forEach.call(ml.querySelectorAll("a"), function(a){ link[a.getAttribute("href").slice(1)] = a; });
 var dau = [].filter.call(document.querySelectorAll("article [id]"), function(h){ return link[h.id]; });
