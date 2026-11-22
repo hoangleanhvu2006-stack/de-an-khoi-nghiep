@@ -105,12 +105,15 @@ details.chuong > summary .i{color:var(--chi);transition:transform .15s}
 details.chuong[open] > summary .i{transform:rotate(90deg)}
 details.chuong[open] > summary{border-bottom:1px solid var(--ke)}
 .ruot{padding:6px 18px 18px}
-.muc{border-top:1px solid var(--ke);padding:4px 0 14px}
-.muc:first-child{border-top:0}
-.muc h3{margin-top:18px}
-.ruot .y-chinh{background:var(--giay);border-radius:12px;padding:10px 14px;margin:0 0 10px;max-width:none;line-height:1.55}
-details.chi-tiet > summary{cursor:pointer;font-weight:700;font-size:15px;color:var(--xanh-chu);padding:4px 0}
-details.chi-tiet[open] > summary{margin-bottom:8px}
+details.muc{border-top:1px solid var(--ke)}
+details.muc:first-of-type{border-top:0}
+details.muc > summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:13px 0}
+details.muc > summary::-webkit-details-marker{display:none}
+details.muc > summary h3{margin:0;flex:1;font-size:17.5px}
+details.muc > summary .i{color:var(--chi);transition:transform .15s}
+details.muc[open] > summary .i{transform:rotate(90deg)}
+.muc-ruot{padding:0 0 12px}
+.tv{max-width:560px;margin:0 0 22px}
 article h3,article h4{scroll-margin-top:16px;text-wrap:balance}
 article h3{font-size:19px;line-height:1.3;font-weight:800;margin:28px 0 8px}
 article h4{font-size:16.5px;line-height:1.35;font-weight:700;margin:22px 0 6px}
@@ -135,7 +138,7 @@ figure.hinh .cot b{font-size:18px}
   .ml a{padding:9px 8px}
   .ml[open] summary{margin-bottom:8px}
 }
-@media print{.bao,header.dau,.ml,footer,.dieu-khien button{display:none}.doc{display:block;padding:0}body{background:#fff;font-size:12pt}details.chuong{border:0}details.chi-tiet > summary{display:none}}
+@media print{.bao,header.dau,.ml,footer,.dieu-khien button{display:none}.doc{display:block;padding:0}body{background:#fff;font-size:12pt}details.chuong{border:0}}
 </style>
 </head>
 <body>
@@ -153,7 +156,8 @@ figure.hinh .cot b{font-size:18px}
   <main><article>
     <p class="loai">Đề án khởi nghiệp</p>
     <h1 class="tua">On Time: ứng dụng nhận ca làm lẻ cho sinh viên</h1>
-    <p class="bia">Bài giữa kỳ môn Văn hóa doanh nghiệp Nhật Bản<br>Nhóm 7: Hoàng Lê Anh Vũ, Vũ Bách Chiến, Vũ Quang Anh, Nguyễn Bảo Khôi<br>Hà Nội, tháng 11/2026</p>
+    <p class="bia">Bài giữa kỳ môn Văn hóa doanh nghiệp Nhật Bản<br>Nhóm 7<br>Hà Nội, tháng 11/2026</p>
+    <div class="cuon tv"><table><tr><th>Thành viên</th><th>Chức vụ</th></tr><tr><td>Hoàng Lê Anh Vũ</td><td>Giám đốc điều hành (CEO)</td></tr><tr><td>Vũ Bách Chiến</td><td>Giám đốc Nghiên cứu thị trường</td></tr><tr><td>Vũ Quang Anh</td><td>Giám đốc Vận hành và Tài chính</td></tr><tr><td>Nguyễn Bảo Khôi</td><td>Giám đốc Nhân sự và Văn hóa</td></tr></table></div>
     <div class="luoi tom">
       <div class="o"><span class="ic vang"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></span><h3>Mô hình</h3><p>Ca lẻ 3 đến 5 tiếng quanh trường, học từ <span lang="ja">スキマバイト</span> của Nhật.</p></div>
       <div class="o"><span class="so">83,3%</span><h3>Khảo sát</h3><p>sinh viên được hỏi nói sẽ dùng.</p></div>
@@ -173,24 +177,24 @@ figure.hinh .cot b{font-size:18px}
 
 </div></details>
 <details class="chuong"><summary><h2 id="mo-dau">A. Mở đầu</h2><span class="dem">3 mục</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="ruot">
-<section class="muc"><h3 id="mo-dau-1">1. Lý do chọn đề tài</h3><p class="y-chinh"><b>Ý chính.</b> Sinh viên muốn đi làm nhưng khó khớp lịch học; quán nhỏ thiếu người đúng giờ cao điểm. Nhật đã có lời giải là việc làm ca lẻ qua ứng dụng.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+<details class="muc"><summary><h3 id="mo-dau-1">1. Lý do chọn đề tài</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <p>Việc làm thêm đã là một phần quen thuộc của đời sống sinh viên. Trong khảo sát nhóm thực hiện với sinh viên trong tháng 11/2026, 86,1% người trả lời đã từng hoặc đang đi làm thêm. Kết quả này gần với một khảo sát 200 sinh viên do VietNamNet đăng cuối năm 2025, trong đó khoảng 80% đã hoặc đang đi làm thêm. Điều khó khăn ở đây là sinh viên khó có thể cân bằng được giữa lịch đi làm và thời khóa biểu đi học. Khi được hỏi điều gì quan trọng nhất lúc chọn chỗ làm, 66,7% chọn xếp ca linh hoạt theo lịch học, cao hơn cả lương giờ cao (61,1%). Trong số người có kinh nghiệm làm thêm, 64,5% từng gặp ít nhất một chuyện không hay như ở lại quá giờ mà không được tính lương, bị trừ lương, bị xếp ca trùng lịch học hoặc bị gọi đi làm gấp.</p>
 <p>Phía chủ quán cũng gặp khó. Báo cáo 6 tháng đầu năm 2026 của iPOS.vn và Nestlé Professional cho thấy doanh thu toàn ngành ăn uống tăng nhưng 43% cơ sở được hỏi nói doanh thu của mình giảm . Quán nhỏ khó giữ thêm một người làm cả tháng, nhưng vẫn thiếu người vào giờ cao điểm, cuối tuần hoặc khi nhân viên chính nghỉ vì lí do cá nhân. Hai bên đều có nhu cầu thật mà chưa gặp được nhau đúng lúc.</p>
 <p>Nhật Bản đã có lời giải cho bài toán này. Kiểu việc làm thêm theo từng ca lẻ, gọi là スキマバイト, cho phép người làm nhận ca qua ứng dụng, không phỏng vấn và được trả tiền ngay sau ca. Timee, công ty đi đầu, mở dịch vụ từ tháng 8/2018; đến cuối tháng 4/2026 ứng dụng có khoảng 14,2 triệu người đăng ký và 465.000 điểm kinh doanh sử dụng. Trong khảo sát của công đoàn UAゼンセン công bố tháng 7/2026, khoảng 60% sinh viên đi làm thêm từng gặp chuyện khó chịu ở chỗ làm , một tỷ lệ gần với kết quả khảo sát của nhóm. Tháng 7/2025, Bộ Y tế, Lao động và Phúc lợi Nhật phải ban hành quy định riêng cho việc làm theo ca lẻ, trong đó buộc chủ trả trợ cấp khi hủy ca . Người đi sau vì vậy học được cả cách làm lẫn bài học về những chỗ dễ sai.</p>
 <p>Từ đó, nhóm chọn xây dựng đề án On Time, một ứng dụng nối sinh viên với các ca làm lẻ ở quán và cửa hàng quanh trường đại học tại Hà Nội. Khi nhóm mô tả ý tưởng này trong khảo sát, 83,3% sinh viên trả lời sẽ dùng (gồm 25,0% dùng ngay và 58,3% muốn dùng thử trước), phần còn lại chưa chắc chắn hoặc không dùng.</p>
-</details></section><section class="muc"><h3 id="mo-dau-2">2. Mục tiêu</h3><p class="y-chinh"><b>Ý chính.</b> Học mô hình ca lẻ của Nhật, khảo sát nhu cầu ở Hà Nội, thiết kế On Time và văn hóa doanh nghiệp của nó.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+</div></details><details class="muc"><summary><h3 id="mo-dau-2">2. Mục tiêu</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <p>Làm rõ mô hình スキマバイト ở Nhật: cách vận hành, lý do tăng trưởng nhanh, mặt trái và cách Nhật xử lý.</p>
 <p>Khảo sát nhu cầu làm thêm của sinh viên và nhu cầu nhân sự theo giờ của chủ quán tại Hà Nội.</p>
 <p>Thiết kế On Time ở bốn mặt: sản phẩm, pháp lý và vận hành, tài chính ba năm, phương án khi rủi ro xảy ra.</p>
 <p>Xây dựng văn hóa doanh nghiệp và chính sách với con người của On Time, chỉ rõ điểm nào học từ Nhật và điểm nào phải chỉnh cho hợp với Việt Nam.</p>
-</details></section><section class="muc"><h3 id="mo-dau-3">3. Phạm vi</h3><p class="y-chinh"><b>Ý chính.</b> Nhật Bản giai đoạn 2019 đến 2026, Việt Nam giai đoạn 2026 đến 2029, địa bàn Hà Nội.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+</div></details><details class="muc"><summary><h3 id="mo-dau-3">3. Phạm vi</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <p><b>Về thời gian.</b> Với Nhật Bản, đề án xem xét giai đoạn 2019 đến 2026, tính từ năm tài chính đầu tiên có số liệu doanh thu của Timee trong các nguồn nhóm tra được, đến kỳ báo cáo gần nhất (tháng 4/2026) và các quy định ban hành năm 2025. Với Việt Nam, giai đoạn là 2026 đến 2029: năm 2026 dành cho khảo sát và chuẩn bị pháp lý, ba năm 2027 đến 2029 là thời gian hoạt động trong kế hoạch tài chính.</p>
 <p><b>Về không gian.</b> Phần kinh nghiệm lấy từ Nhật Bản. Phần đề án giới hạn ở Hà Nội, cụ thể ở 2 quận Cầu Giấy và Đống Đa. Việc mở rộng sang quận và thành phố khác chỉ được nêu thành định hướng.</p>
 <p><b>Về nội dung.</b> Đề án tập trung vào ca làm lẻ từ 3 đến 5 giờ cho sinh viên đủ 18 tuổi tại quán ăn, quán nước và cửa hàng bán lẻ. Việc làm toàn thời gian, lao động chưa đủ 18 tuổi và các ngành khác nằm ngoài phạm vi.</p>
-</details></section></div></details>
+</div></details></div></details>
 <p class="loai" id="noi-dung" style="margin:18px 0 8px">B. Nội dung</p>
 <details class="chuong"><summary><h2 id="chuong-1">Chương I. Việc làm thêm của sinh viên: kinh nghiệm Nhật Bản và thực tế Việt Nam</h2><span class="dem">2 mục</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="ruot">
-<section class="muc"><h3 id="muc-1-1">1.1. Mô hình スキマバイト tại Nhật Bản và kinh nghiệm từ Timee</h3><p class="y-chinh"><b>Ý chính.</b> Timee có khoảng 14,2 triệu người đăng ký nhờ nhận ca không phỏng vấn và trả tiền nhanh. Mặt trái là hủy ca sát giờ, nên năm 2025 Nhật ra quy định riêng.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+<details class="muc"><summary><h3 id="muc-1-1">1.1. Mô hình スキマバイト tại Nhật Bản và kinh nghiệm từ Timee</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <h4 id="muc-1-1-1">1.1.1. スキマバイト là gì?</h4>
 <p>Tại Nhật Bản, スキマバイト (Sukima Baito) là hình thức làm thêm tận dụng những khoảng thời gian trống trong ngày. Người lao động có thể đăng ký những công việc ngắn hạn, theo từng ca, thậm chí chỉ kéo dài vài giờ mà không cần cam kết làm việc lâu dài.</p>
 <p>Khác với hình thức làm thêm truyền thống, người lao động không nhất thiết phải đăng ký một lịch làm cố định hằng tuần. Thay vào đó, họ chủ động lựa chọn công việc phù hợp với thời gian rảnh của mình thông qua các nền tảng công nghệ.</p>
@@ -244,7 +248,7 @@ figure.hinh .cot b{font-size:18px}
 <li>Minh bạch về mức lương, thời gian, nội dung công việc và phương thức thanh toán.</li>
 <li>Xây dựng hệ thống đánh giá, kiểm soát chất lượng và bảo vệ quyền lợi của cả hai bên.</li>
 </ul>
-</details></section><section class="muc"><h3 id="muc-1-2">1.2. Thực trạng việc làm thêm của sinh viên và nhu cầu nhân sự tại các quán ăn, quán cà phê ở Việt Nam</h3><p class="y-chinh"><b>Ý chính.</b> Phần lớn sinh viên đã đi làm thêm, quán ăn uống thiếu người theo giờ. Nhóm thấy một khoảng trống: ca lẻ quanh trường dành cho sinh viên.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+</div></details><details class="muc"><summary><h3 id="muc-1-2">1.2. Thực trạng việc làm thêm của sinh viên và nhu cầu nhân sự tại các quán ăn, quán cà phê ở Việt Nam</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <h4 id="muc-1-2-1">1.2.1. Nhu cầu làm thêm của sinh viên Việt Nam</h4>
 <p>Việc làm thêm đã trở thành một phần quen thuộc trong đời sống của nhiều sinh viên Việt Nam. Bên cạnh mục đích kiếm thêm thu nhập để trang trải chi phí sinh hoạt, sinh viên còn mong muốn tích lũy kinh nghiệm, rèn luyện kỹ năng giao tiếp và làm quen với môi trường làm việc thực tế.</p>
 <p>Theo một khảo sát được VietNamNet đề cập vào cuối năm 2025 trên 200 sinh viên, khoảng 80% người tham gia khảo sát đã hoặc đang làm thêm. Tuy nhiên, do quy mô mẫu còn hạn chế, con số này chỉ mang tính tham khảo, không đại diện cho toàn bộ sinh viên Việt Nam.</p>
@@ -288,9 +292,9 @@ figure.hinh .cot b{font-size:18px}
 <p>On Time hướng đến mô hình nền tảng kết nối các quán ăn, quán cà phê có nhu cầu tuyển nhân sự theo từng ca với sinh viên đang có thời gian rảnh. Thay vì phải đăng ký làm việc cố định trong thời gian dài, sinh viên có thể chủ động lựa chọn ca phù hợp, hoàn thành công việc và nhận tiền công theo từng ca.</p>
 <p>Về phía chủ quán, nền tảng giúp đăng tuyển nhanh chóng, tiếp cận nguồn nhân lực sinh viên và bổ sung nhân sự vào những khung giờ cần thiết.</p>
 <p>Như vậy, On Time vừa giải quyết vấn đề việc làm thêm của sinh viên, vừa giúp các cơ sở kinh doanh dịch vụ ăn uống sử dụng nhân lực linh hoạt và hiệu quả hơn.</p>
-</details></section></div></details>
+</div></details></div></details>
 <details class="chuong"><summary><h2 id="chuong-2">Chương II. Đề án On Time</h2><span class="dem">5 mục</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="ruot">
-<section class="muc"><h3 id="muc-2-1">2.1. Giới thiệu công ty</h3><p class="y-chinh"><b>Ý chính.</b> Công ty cổ phần On Time, dự kiến thành lập tháng 1/2027 tại Hà Nội, năm đầu làm quanh Đống Đa và Cầu Giấy, vốn ban đầu 2 tỷ đồng.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+<details class="muc"><summary><h3 id="muc-2-1">2.1. Giới thiệu công ty</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <h4 id="muc-2-1-1">2.1.1. Tên gọi và thông tin chung</h4>
 <p>Công ty cổ phần On Time là doanh nghiệp do nhóm xây dựng, dự kiến thành lập tháng 1/2027 tại Hà Nội. On Time vận hành một ứng dụng nối sinh viên với các ca làm lẻ từ 3 đến 5 giờ ở quán ăn, quán nước và cửa hàng quanh trường đại học. Sinh viên nhận ca mà không cần phỏng vấn và nhận tiền công trong 24 giờ sau ca; quán đăng ca khi thiếu người và trả phí dịch vụ tính trên tiền công.</p>
 <p>Tên On Time nghĩa là đúng giờ, đúng lúc. Nhóm chọn tên này vì nó nói được lời hứa của công ty với cả ba phía: sinh viên đến ca đúng giờ, quán trả tiền công đúng hạn, còn On Time đưa người đến đúng lúc quán cần. Đúng giờ cũng là điều người Nhật coi là phép tắc căn bản trong công việc, nên cái tên nhắc luôn nguồn gốc của mô hình.</p>
@@ -315,7 +319,7 @@ figure.hinh .cot b{font-size:18px}
 <p class="ten-bang">Bảng 2.2. Đội ngũ năm đầu</p>
 <div class="cuon"><table><tr><th>Vị trí</th><th>Người giữ</th><th>Việc chính</th></tr><tr><td>Giám đốc điều hành (CEO)</td><td>Hoàng Lê Anh Vũ</td><td>Định hướng chung, sản phẩm, đối ngoại, khảo sát sinh viên</td></tr><tr><td>Giám đốc Nghiên cứu thị trường</td><td>Vũ Bách Chiến</td><td>Điều tra hàng quán, theo dõi mô hình Nhật Bản, ký quán đối tác</td></tr><tr><td>Giám đốc Vận hành và Tài chính</td><td>Vũ Quang Anh</td><td>Vận hành ứng dụng, thanh toán, pháp lý, kế hoạch tài chính</td></tr><tr><td>Giám đốc Nhân sự và Văn hóa</td><td>Nguyễn Bảo Khôi</td><td>Bộ quy tắc, hướng dẫn quán và người nhận ca, ký quán đối tác</td></tr></table></div>
 
-</details></section><section class="muc"><h3 id="muc-2-2">2.2. Người dùng, đối thủ và kết quả khảo sát</h3><p class="y-chinh"><b>Ý chính.</b> Khách hàng là sinh viên từ 18 tuổi và quán nhỏ quanh trường. 83,3% sinh viên được hỏi nói sẽ dùng; mức phí quán chịu trả chưa được kiểm chứng.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+</div></details><details class="muc"><summary><h3 id="muc-2-2">2.2. Người dùng, đối thủ và kết quả khảo sát</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <h4 id="muc-2-2-1">2.2.1. Nhóm khách hàng mục tiêu</h4>
 <p>On Time hướng đến hai nhóm khách hàng chính.</p>
 <p><b>Sinh viên:</b> có nhu cầu làm thêm để tăng thu nhập nhưng bị giới hạn bởi lịch học, lịch thi và thời gian di chuyển. Nhóm này cần công việc linh hoạt, ca ngắn từ 3 đến 5 tiếng, được hướng dẫn rõ ràng và nhận tiền nhanh sau khi hoàn thành ca.</p>
@@ -347,7 +351,7 @@ figure.hinh .cot b{font-size:18px}
 <p>Chủ quán có thể lo về kỹ năng của sinh viên mới, tình trạng bỏ ca, chất lượng công việc và mức phí dịch vụ. Vì vậy On Time có cơ chế xác minh người nhận ca, điểm uy tín và danh sách người dự bị khi có ca trống sát giờ.</p>
 <h4 id="muc-2-2-5">2.2.5. Đánh giá cơ hội thị trường</h4>
 <p>Khảo sát cho thấy phía sinh viên có nhu cầu rõ: 83,3% sẵn sàng dùng và 83,3% muốn nhận ít nhất một ca lẻ mỗi tuần. Phía quán có quy mô lớn, với khoảng 329.200 cửa hàng ăn uống trên cả nước, nhưng mức sẵn lòng trả phí 15 đến 20% chưa được kiểm chứng. </p>
-</details></section><section class="muc"><h3 id="muc-2-3">2.3. Sản phẩm: ứng dụng chạy thế nào và bản dùng thử</h3><p class="y-chinh"><b>Ý chính.</b> Một ca đi qua sáu bước, từ quán đăng ca đến chấm điểm hai chiều. Năm đầu chỉ nhận năm nhóm việc đơn giản.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+</div></details><details class="muc"><summary><h3 id="muc-2-3">2.3. Sản phẩm: ứng dụng chạy thế nào và bản dùng thử</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <h4 id="muc-2-3-1">2.3.1. Tổng quan</h4>
 <p>Sản phẩm của On Time là một ứng dụng có hai vai người dùng: sinh viên nhận ca và quán đăng ca. Bản đầu chạy trên web, mở bằng trình duyệt điện thoại và không cần cài đặt, để giảm chi phí làm sản phẩm trong năm đầu (500 triệu đồng trong kế hoạch vốn ở mục 2.5). Ứng dụng riêng cho điện thoại chỉ làm khi số ca đủ lớn.</p>
 <h4 id="muc-2-3-2">2.3.2. Một ca đi qua ứng dụng như thế nào</h4>
@@ -362,7 +366,7 @@ figure.hinh .cot b{font-size:18px}
 <p>Năm đầu On Time chỉ nhận năm nhóm việc không cần đào tạo sâu: dọn bàn, rửa bát, bưng bê, xếp hàng và kiểm kho, phát tờ rơi. Ứng dụng chưa nhận pha chế, thu ngân, đứng bếp và giao hàng bằng xe máy. Lựa chọn này dựa trên kinh nghiệm của Timee: tính theo số người cần tuyển trong tháng 1/2026, kho vận và bán lẻ chiếm 72%, còn ăn uống chỉ 13% [10], tức mô hình ca lẻ chạy tốt nhất ở những việc đơn giản và có quy trình sẵn.</p>
 <h4 id="muc-2-3-5">2.3.5. Bản dùng thử</h4>
 <p>Nhóm dựng một bản mô phỏng ứng dụng chạy trong trình duyệt để người xem tự bấm qua sáu bước ở Bảng 2.5, ở cả hai vai sinh viên và chủ quán. Bản mô phỏng dùng dữ liệu mẫu, không có tài khoản thật và không có giao dịch tiền thật. Địa chỉ bản dùng thử: <a href="ung-dung.html">trang Ứng dụng của web này</a>.</p>
-</details></section><section class="muc"><h3 id="muc-2-4">2.4. Pháp lý và vận hành</h3><p class="y-chinh"><b>Ý chính.</b> Cần giấy phép dịch vụ việc làm và ký quỹ 300 triệu đồng. Quán nạp tiền trước, sinh viên nhận tiền trong 24 giờ, có bảo hiểm tai nạn.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+</div></details><details class="muc"><summary><h3 id="muc-2-4">2.4. Pháp lý và vận hành</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <h4 id="muc-2-4-1">2.4.1. Giấy phép và quan hệ pháp lý</h4>
 <p>Hoạt động của On Time là dịch vụ việc làm. Theo Luật Việc làm 2025 và Nghị định 352/2025/NĐ-CP, áp dụng từ ngày 1/1/2026, doanh nghiệp làm dịch vụ việc làm phải có giấy phép và ký quỹ 300 triệu đồng [13], [14]. Luật Đầu tư 2025 đưa ngành này ra khỏi danh mục kinh doanh có điều kiện từ ngày 1/7/2026, nhưng tháng 4/2026 Bộ Nội vụ trả lời rằng trong lúc chờ hướng dẫn, doanh nghiệp vẫn thực hiện theo Nghị định 352. Đề án vì vậy tính sẵn 300 triệu đồng ký quỹ trong vốn ban đầu và sẽ kiểm tra lại quy định tại thời điểm đăng ký.</p>
 <p>Về quan hệ giữa các bên: thỏa thuận làm việc hình thành giữa quán và sinh viên ngay khi sinh viên nhận ca, còn bên vận hành ứng dụng là bên giới thiệu [7]. Quán là bên sử dụng lao động, chịu trách nhiệm về tiền công và an toàn tại nơi làm việc.</p>
@@ -383,7 +387,7 @@ figure.hinh .cot b{font-size:18px}
 <li><b>Sinh viên:</b> cung cấp thông tin chính xác, đến đúng giờ và hoàn thành ca làm.</li>
 </ul>
 <p>Quy trình vận hành gồm sáu bước: đăng ca, kiểm duyệt, sinh viên nhận ca, quét mã vào và ra ca, xác nhận hoàn thành, thanh toán và chấm điểm. Các rủi ro như bỏ ca, chậm trả lương, tin tuyển giả hoặc tai nạn được kiểm soát bằng xác minh thông tin, điểm uy tín và kênh tiếp nhận khiếu nại.</p>
-</details></section><section class="muc"><h3 id="muc-2-5">2.5. Kế hoạch tài chính và phân tích độ nhạy</h3><p class="y-chinh"><b>Ý chính.</b> Phí 20% và 15%, mỗi ca còn lại bình quân 17.540 đồng. Giả định lỗ 874 triệu năm 2027, lỗ 61 triệu năm 2028, lãi 2.092 triệu năm 2029.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+</div></details><details class="muc"><summary><h3 id="muc-2-5">2.5. Kế hoạch tài chính và phân tích độ nhạy</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <h4 id="muc-2-5-1">2.5.1. Cơ cấu doanh thu và chi phí trên mỗi ca làm</h4>
 <p>On Time thu phí dịch vụ theo hai mức: 20% đối với ca có sinh viên mới và 15% đối với ca sinh viên được quán mời lại. Với ca làm 4 giờ, mức lương 32.000 đồng/giờ, sinh viên nhận 128.000 đồng.</p>
 <div class="cuon"><table><tr><th>Khoản mục</th><th>Ca người mới</th><th>Ca mời lại</th></tr><tr><td>Phí On Time thu</td><td>25.600đ</td><td>19.200đ</td></tr><tr><td>Quán phải trả</td><td>153.600đ</td><td>147.200đ</td></tr><tr><td>Chi phí thanh toán</td><td>2.500đ</td><td>2.500đ</td></tr><tr><td>Bảo hiểm tai nạn</td><td>2.500đ</td><td>2.500đ</td></tr><tr><td>Hỗ trợ, hoàn tiền</td><td>500đ</td><td>500đ</td></tr><tr><td><b>On Time còn lại</b></td><td><b>20.100đ</b></td><td><b>13.700đ</b></td></tr></table></div>
@@ -415,9 +419,9 @@ figure.hinh .cot b{font-size:18px}
 <p>Để kiểm soát rủi ro, nếu hết quý II/2027 số ca đạt dưới 70% kế hoạch, On Time sẽ dừng tuyển thêm nhân sự, cắt giảm marketing đại trà và tập trung duy trì 30 đến 50 quán có tần suất sử dụng cao. Bốn thành viên sáng lập cũng dự kiến giảm mức nhận từ 15 triệu xuống 9 triệu đồng/tháng trong 6 tháng đầu, tiết kiệm 144 triệu đồng.</p>
 <p>Về khả năng chấp nhận mức phí, một nhân viên làm cố định 4 giờ/ngày với mức lương tối thiểu giả định 27.400 đồng/giờ có thể khiến quán tốn khoảng 3,29 triệu đồng/tháng. Với nhu cầu không quá 21 ca lẻ mỗi tháng, sử dụng On Time có thể tiết kiệm hơn so với duy trì nhân sự cố định. Vì vậy, mô hình phù hợp nhất với các quán thường xuyên thiếu nhân viên đột xuất, thay vì cạnh tranh bằng mức lương thấp.</p>
 <p>On Time cần chấp nhận giai đoạn đầu thua lỗ để xây dựng thị trường và đạt quy mô đủ lớn. Khả năng thành công phụ thuộc chủ yếu vào tốc độ tăng số ca, giữ giao dịch trên ứng dụng và kiểm soát chi phí trong hai năm đầu.</p>
-</details></section></div></details>
+</div></details></div></details>
 <details class="chuong"><summary><h2 id="chuong-3">Chương III. Văn hóa doanh nghiệp: chính sách và con người</h2><span class="dem">3 mục</span><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="ruot">
-<section class="muc"><h3 id="muc-3-1">3.1. Xây dựng văn hóa doanh nghiệp theo mô hình ba tầng và bài học kinh nghiệm từ Nhật Bản</h3><p class="y-chinh"><b>Ý chính.</b> Văn hóa On Time dựng theo ba tầng và học các thực hành của doanh nghiệp Nhật, có chỉnh cho quán nhỏ ở Việt Nam.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+<details class="muc"><summary><h3 id="muc-3-1">3.1. Xây dựng văn hóa doanh nghiệp theo mô hình ba tầng và bài học kinh nghiệm từ Nhật Bản</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <h4 id="muc-3-1-1">3.1.1. Xây dựng văn hóa doanh nghiệp theo mô hình ba tầng</h4>
 <p>Đối với một doanh nghiệp hoạt động trong lĩnh vực kết nối việc làm bán thời gian như On Time, văn hóa doanh nghiệp định hình môi trường làm việc nội bộ và ảnh hưởng trực tiếp đến chất lượng dịch vụ, mức độ tin tưởng của người sử dụng và khả năng phát triển lâu dài. Do đặc thù hoạt động kết nối hai nhóm đối tượng có nhu cầu và lợi ích khác nhau là sinh viên và chủ quán, On Time cần xây dựng một hệ thống văn hóa doanh nghiệp đề cao tính minh bạch, trách nhiệm và sự công bằng.</p>
 <p>Để xây dựng hệ thống này, On Time vận dụng mô hình văn hóa doanh nghiệp ba tầng của Edgar H. Schein, bao gồm các yếu tố hữu hình, những giá trị được tuyên bố và các quan niệm nền tảng được chia sẻ trong tổ chức. [18]</p>
@@ -447,7 +451,7 @@ figure.hinh .cot b{font-size:18px}
 <p>Ngoài ra, On Time cũng tiếp thu những nguyên tắc quản trị nhân sự và văn hóa doanh nghiệp của Nhật Bản. Từ mô hình tiêu chuẩn phục vụ của Tokyo Disney Resort, doanh nghiệp xây dựng bốn nguyên tắc dành cho sinh viên khi nhận ca, bao gồm: An toàn, Đúng giờ, Lễ phép, Làm gọn. Từ tinh thần 報連相 (Hō-Ren-Sō), tức báo cáo, liên lạc và trao đổi, On Time thiết lập quy trình thông báo sự cố với ba nội dung cơ bản: sự việc xảy ra là gì, sinh viên đang ở đâu và cần được hỗ trợ như thế nào. Đồng thời, tinh thần 改善 (Kaizen, cải tiến liên tục) được vận dụng thông qua việc lấy ý kiến sinh viên sau mỗi ca làm, từ đó tổng hợp những vấn đề phát sinh và điều chỉnh quy trình vận hành hằng tuần. Những phương pháp này giúp doanh nghiệp duy trì chất lượng dịch vụ và từng bước hoàn thiện trải nghiệm của người sử dụng.</p>
 <p>Tuy nhiên, On Time không áp dụng toàn bộ những đặc điểm của thị trường việc làm bán thời gian Nhật Bản. Một trong những vấn đề cần tránh là hiện tượng ブラックバイト (Black Baito), chỉ tình trạng sinh viên bị bóc lột sức lao động, bị giao những công việc quá sức hoặc bị gây áp lực phải duy trì lịch làm cố định, ảnh hưởng đến việc học tập. Vì vậy, On Time xác định bản chất của nền tảng là kết nối các ca làm ngắn hạn, không phải cung cấp nguồn lao động toàn thời gian dưới hình thức bán thời gian. Sinh viên có quyền chủ động lựa chọn hoặc từ chối ca làm được mời, không bị ép buộc nhận lịch cố định và được giới hạn thời gian làm việc tối đa 20 giờ mỗi tuần theo chính sách của nền tảng.</p>
 <p>Nhìn chung, kinh nghiệm từ Nhật Bản giúp On Time xây dựng được nền tảng quản trị có tính kỷ luật, minh bạch và tiêu chuẩn hóa. Tuy nhiên, điểm cốt lõi trong quá trình vận dụng là phải điều chỉnh những kinh nghiệm này theo hướng đơn giản, linh hoạt và phù hợp với thực tế Việt Nam. Thay vì chỉ tập trung vào tốc độ kết nối việc làm, On Time hướng đến xây dựng một môi trường mà sinh viên được bảo đảm quyền lợi, chủ quán được đáp ứng nhu cầu nhân sự và cả hai bên đều có trách nhiệm trong quá trình hợp tác. Đây chính là cơ sở để doanh nghiệp tạo dựng niềm tin và phát triển bền vững trong dài hạn.</p>
-</details></section><section class="muc"><h3 id="muc-3-2">3.2. Bộ quy tắc quán tử tế và hệ thống đánh giá hai chiều</h3><p class="y-chinh"><b>Ý chính.</b> Bộ quy tắc áp cho cả quán và sinh viên. Sau mỗi ca hai bên chấm điểm nhau: sinh viên chấm quán năm tiêu chí, quán chấm sinh viên bốn tiêu chí.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+</div></details><details class="muc"><summary><h3 id="muc-3-2">3.2. Bộ quy tắc quán tử tế và hệ thống đánh giá hai chiều</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <h4 id="muc-3-2-1">3.2.1. Xây dựng bộ quy tắc quán tử tế</h4>
 <p>Một trong những vấn đề lớn của thị trường việc làm bán thời gian là sự thiếu minh bạch về điều kiện làm việc, tiền công và trách nhiệm giữa người lao động với chủ sử dụng lao động. Sinh viên thường có ít kinh nghiệm làm việc, trong khi nhiều cơ sở kinh doanh nhỏ chưa có quy trình quản lý nhân sự chuyên nghiệp.</p>
 <p>Vì vậy, On Time xây dựng bộ quy tắc quán tử tế (Fair Workplace Standards) như một tiêu chuẩn bắt buộc đối với tất cả các cơ sở kinh doanh muốn đăng tuyển trên nền tảng. Bộ quy tắc này bảo vệ sinh viên, đồng thời giúp các chủ quán xây dựng hình ảnh chuyên nghiệp và thu hút người lao động có trách nhiệm.</p>
@@ -482,7 +486,7 @@ figure.hinh .cot b{font-size:18px}
 <p>Kết quả đánh giá được tổng hợp thành điểm uy tín trên nền tảng. Đối với những chủ quán có điểm đánh giá thấp hoặc thường xuyên vi phạm bộ quy tắc, On Time sẽ tiến hành xác minh và có thể tạm dừng hoặc gỡ bỏ quyền đăng tuyển. Đối với sinh viên, những trường hợp thường xuyên nhận ca nhưng không đến hoặc vi phạm nghiêm trọng quy định sẽ bị hạn chế quyền nhận ca trong một khoảng thời gian nhất định.</p>
 <p>Tuy nhiên, hệ thống đánh giá không được vận hành theo cơ chế tự động xử phạt hoàn toàn. On Time cần có bộ phận hỗ trợ tiếp nhận khiếu nại, kiểm tra thông tin và xem xét bằng chứng từ cả hai phía trước khi đưa ra quyết định. Đặc biệt, việc sinh viên báo cáo sự cố hoặc phản ánh điều kiện làm việc không phù hợp không được xem là căn cứ để tự động hạ điểm uy tín.</p>
 <p>Thông qua cơ chế này, On Time kỳ vọng tạo ra một môi trường mà cả sinh viên và chủ quán đều có động lực duy trì uy tín của mình. Đây cũng là yếu tố giúp doanh nghiệp xây dựng lợi thế cạnh tranh dựa trên chất lượng và sự tin tưởng, thay vì chỉ cạnh tranh bằng số lượng ca làm hoặc mức phí dịch vụ.</p>
-</details></section><section class="muc"><h3 id="muc-3-3">3.3. Chính sách nhân sự nội bộ, quản trị rủi ro và định hướng mở rộng</h3><p class="y-chinh"><b>Ý chính.</b> Công ty năm người, sáng lập viên tự đi làm ca mỗi tháng. Có phương án khi số ca dưới 70% kế hoạch và lộ trình mở rộng sang quận khác.</p><details class="chi-tiet"><summary>Đọc đầy đủ mục này</summary>
+</div></details><details class="muc"><summary><h3 id="muc-3-3">3.3. Chính sách nhân sự nội bộ, quản trị rủi ro và định hướng mở rộng</h3><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="muc-ruot">
 <h4 id="muc-3-3-1">3.3.1. Chính sách nhân sự và văn hóa nội bộ</h4>
 <p>Với đặc điểm là một doanh nghiệp khởi nghiệp công nghệ có quy mô nhân sự ban đầu tương đối nhỏ, On Time lựa chọn mô hình quản trị tinh gọn, đề cao tính linh hoạt và sự chủ động của mỗi thành viên.</p>
 <p>Trong năm đầu tiên, doanh nghiệp có năm người hưởng lương: bốn sáng lập viên, trong đó hai người phụ trách sản phẩm và vận hành, hai người phụ trách phát triển và duy trì quan hệ với các quán đối tác, cùng một nhân viên hỗ trợ người dùng. Cơ cấu này giúp doanh nghiệp kiểm soát chi phí vận hành, đồng thời bảo đảm những hoạt động cốt lõi được triển khai đầy đủ.</p>
@@ -531,7 +535,7 @@ figure.hinh .cot b{font-size:18px}
 <p>Bộ quy tắc quán tử tế và hệ thống đánh giá hai chiều giúp On Time tạo dựng niềm tin giữa các bên, trong khi chính sách nhân sự nội bộ giúp duy trì sự gắn kết và trách nhiệm của đội ngũ vận hành. Đồng thời, việc xây dựng các phương án kiểm soát rủi ro và mở rộng theo từng giai đoạn giúp doanh nghiệp hạn chế áp lực tài chính trong những năm đầu hoạt động.</p>
 <p>Tuy nhiên, tính bền vững của mô hình nằm ở khả năng thực thi trong thực tế nhiều hơn là ở những quy định trên giấy tờ. On Time cần bảo đảm rằng các quy tắc được áp dụng nhất quán, các phản ánh được giải quyết công bằng và những cam kết với người dùng được thực hiện đúng như đã công bố.</p>
 <p><b>Vì vậy, mục tiêu cuối cùng của On Time là xây dựng một hệ sinh thái việc làm bán thời gian đáng tin cậy, nơi sinh viên được chủ động về thời gian, chủ quán được hỗ trợ đúng lúc và mọi giao dịch đều dựa trên sự tôn trọng lẫn nhau.</b></p>
-</details></section></div></details>
+</div></details></div></details>
 <details class="chuong"><summary><h2 id="ket-luan">Kết luận</h2><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></summary><div class="ruot">
 <p>Đề án On Time xuất phát từ một nhu cầu có thật ở cả hai phía. Trong khảo sát của nhóm, 66,7% sinh viên coi xếp ca linh hoạt là điều quan trọng nhất khi chọn chỗ làm và 83,3% sẵn sàng dùng một ứng dụng nhận ca lẻ. Phía quán, số liệu ngành cho thấy áp lực chi phí khiến nhiều cơ sở khó giữ thêm người làm cố định.</p>
 <p>Từ Nhật Bản, nhóm học ba điều. Một là mô hình スキマバイト của Timee: nhận ca không phỏng vấn, trả tiền nhanh, bắt đầu từ những việc đơn giản. Hai là bài học từ mặt trái: quy định tháng 7/2025 về trách nhiệm của chủ khi hủy ca được On Time đưa thành quy tắc ngay từ đầu. Ba là các thực hành quản trị như 現場主義, 報連相, 改善 và 朝礼, được rút gọn cho một công ty năm người.</p>
@@ -576,7 +580,7 @@ var ml = document.getElementById("ml"), hep = window.matchMedia("(max-width:900p
 var chuong = [].slice.call(document.querySelectorAll("details.chuong")), nut = document.getElementById("mo-het");
 function dat(){ if (hep.matches) ml.removeAttribute("open"); else ml.setAttribute("open",""); }
 dat(); if (hep.addEventListener) hep.addEventListener("change", dat);
-function moHet(mo){ [].forEach.call(document.querySelectorAll("details.chuong, details.chi-tiet"), function(c){ c.open = mo; }); nut.setAttribute("aria-pressed", mo); nut.textContent = mo ? "Gập tất cả các phần" : "Mở tất cả các phần"; }
+function moHet(mo){ [].forEach.call(document.querySelectorAll("details.chuong, details.muc"), function(c){ c.open = mo; }); nut.setAttribute("aria-pressed", mo); nut.textContent = mo ? "Gập tất cả các phần" : "Mở tất cả các phần"; }
 nut.addEventListener("click", function(){ moHet(nut.getAttribute("aria-pressed") !== "true"); });
 function toi(id, cuon){
   if (CU[id]){ id = CU[id]; try { history.replaceState(null, "", "#" + id); } catch (err) {} }
